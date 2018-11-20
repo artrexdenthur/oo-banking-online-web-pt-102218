@@ -36,5 +36,6 @@ class Transfer
       @receiver.balance -= amount
       @status = 'pending'
     end
+  end
   
 end
