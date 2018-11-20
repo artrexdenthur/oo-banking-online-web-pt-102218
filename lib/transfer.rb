@@ -12,7 +12,9 @@ class Transfer
   end
   
   def valid?
-    check = sender.clone
+    sender_check = @sender.clone
+    sender_check.balance -= @amount
+    sender_check.valid? && receiver.valid?
   end
   
   def execute_transaction
